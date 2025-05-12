@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Digite um número">
+    <button onclick="executar()">Enviar</button>
+
+    <p id="resultado"></p>  
+
+    <script>
+
+        function executar(){
+
+            const n1 = parseInt(document.getElementById('num1').value)
+
+            if(!n1){
+                for(i=0; i<=100 ; i++){
+                    document.getElementById('resultado').innerText += ' ' + i
+                }
+            } else{
+                for(i=0; i<=n1 ; i++){
+                    document.getElementById('resultado').innerText += ' ' + i
+                }
+            }
+        }
+    </script>
+</body>
+</html>

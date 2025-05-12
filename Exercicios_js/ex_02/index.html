@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Digite um número">
+    <button onclick="executar()">Enviar</button>
+
+    <h1>A tabuada do seu número é:</h1>
+    <p id="resultado"></p>  
+
+    <script>
+
+        function executar(){
+
+            const n1 = parseInt(document.getElementById('num1').value)
+
+            for(i=0; i<=10 ; i++){
+                document.getElementById('resultado').innerText += ' ' + i*n1
+            }
+        }
+    </script>
+</body>
+</html>

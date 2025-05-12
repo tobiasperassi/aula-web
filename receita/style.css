@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+body{
+    
+    background-color:rgba(255, 228, 196, 0.712);
+    justify-items: center;
+    font-family: "Bree Serif", serif;
+    font-style: normal;
+}
+.blocomaior{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 80px;
+    width: 700px;
+    margin-bottom: 100px;
+}
+.preparation{
+    background-color: rgb(243, 228, 228);
+}
+ul {
+    list-style-type: none; /* Remove as bolinhas padrão */
+}
+li{
+    color: grey;
+}
+ul li {
+    position: relative;
+    padding-left: 40px; /* Espaço para a bolinha personalizada */
+}
+ul li::before {
+    content: '•'; /* Adiciona a bolinha */
+    position: absolute;
+    left: 0;
+    color: rgb(211, 171, 118); /* Cor da bolinha */
+}
+.blocodedois{    
+    display: flex;
+    padding-left: 40px;
+}
+
+p{
+    color: grey;
+}
+strong{
+    color:black;
+}

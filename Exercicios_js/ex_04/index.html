@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar até 0</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Digite um número">
+    <button onclick="executar()">Enviar</button>
+
+    <p id="resultado"></p>  
+
+    <script>
+        let soma = 0;
+
+        function executar(){
+            const n1 = parseInt(document.getElementById('num1').value);
+
+            if (n1 !== 0) {
+                soma += n1;
+                document.getElementById('num1').value = '';
+            } else {
+                finalizar();
+            }
+        }
+
+        function finalizar() {
+            document.getElementById('resultado').innerText = 'Resultado final = ' + soma;
+        }
+    </script>
+</body>
+</html>

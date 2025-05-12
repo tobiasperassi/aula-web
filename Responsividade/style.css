@@ -1,0 +1,75 @@
+body{
+    text-align: center;
+    margin: 0;
+}
+header{
+    background-color: aqua;
+    width: 100%;
+    height: 15vh;
+}
+.bloco{
+    display: flex;
+    flex-direction: row;
+}
+.conteudo{
+    background-color: rgb(232, 92, 138);
+    height: 70vh;
+    width: 75%;
+}
+.sidebar{
+    background-color: yellow;
+    height: 70vh;
+    width: 25%;
+}
+.bloco2{
+    display: flex;
+    flex-direction: row;
+
+}
+.parte1, .parte3{
+    width: 25%;
+    background-color: green;
+    border: 1px solid white;
+}
+.parte2{
+    background-color: green;
+    width: 50%;
+    height: 15vh;
+    border: 1px solid white;    
+}
+@media screen and (max-width: 720px) {
+    .bloco{
+        flex-direction: column;
+    }
+    .conteudo{
+        width: 100%;
+        height: 50vh;
+    }
+    .sidebar{
+        width: 100%;
+        height: 25vh;
+    }
+    header{
+        height: 10vh;
+    }
+    .parte1, .parte2{
+        width: 49%;
+        height: 7vh;
+    }
+    .parte3{
+        width: 100%;
+        height: 7vh;
+    }
+    .bloco2{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 420px) {
+    .bloco2{
+        flex-wrap: wrap;
+    }
+    .parte1, .parte2, .parte3{
+        width: 100%;
+        height: 5vh;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Digite o 1° número">
+    <input type="number" id="num2" placeholder="Digite o 2° número">
+    <input type="number" id="num3" placeholder="Digite o 3° número">
+    <button onclick="executar()">Enviar</button>
+
+    <h1>A média dos 3 números é:</h1>
+    <p id="resultado"></p>
+    <div id="passou"></div>
+
+    <script>
+
+        function executar(){
+
+            const n1 = parseInt(document.getElementById('num1').value)
+            const n2 = parseInt(document.getElementById('num2').value)
+            const n3 = parseInt(document.getElementById('num3').value)
+
+            const media = (n1 + n2 + n3)/3;
+            document.getElementById('resultado').innerText = media
+            if(media >= 6){
+                document.getElementById('passou').innerText = 'Parabéns, você passou!'
+            } else{
+                document.getElementById('passou').innerText = 'Burro, você reprovou!'
+            }
+        }
+    </script>
+</body>
+</html>
