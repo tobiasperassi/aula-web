@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Senha</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .bloco {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bloco input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        .bloco button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .bloco button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="bloco">
+        <input type="text" id="palavra" placeholder="Digite sua senha">
+        <button onclick="verificarSenha()">Conferir</button>
+        <p id="caracteres">Pelo menos 8 caracteres</p>
+        <p id="maiuscula">Pelo menos 1 letra maiúscula</p>
+        <p id="minuscula">Pelo menos 1 letra minúscula</p>
+        <p id="numero">Pelo menos 1 número</p>
+        <p id="especial">Pelo menos 1 caractere especial (!@#$%)</p>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            const senha = document.getElementById('palavra').value;
+
+            const tem8Caracteres = senha.length >= 8;
+            const temMaiuscula = /[A-Z]/.test(senha);
+            const temMinuscula = /[a-z]/.test(senha);
+            const temNumero = /[0-9]/.test(senha);
+            const temEspecial = /[^a-zA-Z0-9]/.test(senha);
+
+            document.getElementById('caracteres').style.color = tem8Caracteres ? "green" : "red";
+            document.getElementById('maiuscula').style.color = temMaiuscula ? "green" : "red";
+            document.getElementById('minuscula').style.color = temMinuscula ? "green" : "red";
+            document.getElementById('numero').style.color = temNumero ? "green" : "red";
+            document.getElementById('especial').style.color = temEspecial ? "green" : "red";
+        }
+    </script>
+</body>
+</html>
